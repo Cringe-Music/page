@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    min-height: 100vh;
+    color: #22223b;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    max-width: 1100px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(80,40,40,0.10), 0 1.5px 8px rgba(50,50,100,0.05);
+    padding: 36px 28px;
+    flex-wrap: wrap;
+}
+
+.contact-form-section {
+    flex: 1.2;
+    min-width: 320px;
+    max-width: 520px;
+    padding-right: 18px;
+}
+
+.contact-form-section h1 {
+    font-size: 2.2rem;
+    color: #e07a5f;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.18rem;
+    color: #3d405b;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #22223b;
+    margin-bottom: 22px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #3d405b;
+    margin-bottom: 3px;
+    margin-top: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border: none;
+    border-radius: 7px;
+    padding: 11px 13px;
+    font-size: 1rem;
+    background: #f8fafc;
+    box-shadow: 0 1px 4px rgba(180, 180, 220, 0.07);
+    outline: none;
+    transition: box-shadow .2s, background .2s;
+    color: #22223b;
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    background: #eaf3ff;
+    box-shadow: 0 0 0 2px #e07a5f55;
+}
+
+.contact-form button {
+    margin-top: 10px;
+    background: linear-gradient(90deg, #e07a5f 60%, #3d405b 100%);
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    padding: 12px 0;
+    font-size: 1.08rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    cursor: pointer;
+    box-shadow: 0 3px 12px #e07a5f22;
+    transition: background .18s, transform .18s, box-shadow .18s;
+}
+
+.contact-form button:hover, .contact-form button:focus {
+    background: linear-gradient(90deg, #3d405b 40%, #e07a5f 100%);
+    transform: scale(1.03);
+    box-shadow: 0 6px 28px #e07a5f33;
+}
+
+.contact-info-section {
+    flex: 1;
+    min-width: 260px;
+    max-width: 380px;
+    background: #f8f6ff;
+    border-radius: 12px;
+    box-shadow: 0 1px 8px #b1d0ff22;
+    padding: 28px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+}
+
+.info-block {
+    margin-bottom: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2eafc;
+}
+
+.info-block:last-child {
+    border-bottom: none;
+}
+
+.contact-info-section h2 {
+    color: #3d405b;
+    font-size: 1.15rem;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+.info-title {
+    font-weight: bold;
+    color: #e07a5f;
+    margin-bottom: 3px;
+}
+
+.info-description {
+    color: #22223b;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.social-list li a {
+    color: #244085;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    transition: color .18s;
+}
+
+.social-list li a:hover {
+    color: #e07a5f;
+}
+
+.icon {
+    width: 22px;
+    height: 22px;
+    filter: grayscale(.15) brightness(1.15);
+    vertical-align: middle;
+}
+
+.horarios {
+    list-style: none;
+    padding: 0;
+    color: #3d405b;
+    font-size: 1rem;
+}
+
+.horarios li {
+    margin-bottom: 5px;
+}
+
+.horarios li:last-child {
+    color: #e07a5f;
+    font-weight: bold;
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 32px;
+        padding: 18px 5px;
+    }
+    .contact-form-section, .contact-info-section {
+        max-width: 100%;
+        min-width: 0;
+        padding: 0;
+    }
+    .contact-info-section {
+        margin-top: 15px;
+    }
+}
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 6px 2vw;
+    }
+    .contact-form-section h1 {
+        font-size: 1.4rem;
+    }
+    .contact-info-section {
+        padding: 10px 6px;
+    }
+}

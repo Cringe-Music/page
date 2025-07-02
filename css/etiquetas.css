@@ -1,0 +1,1281 @@
+body {
+  margin: 0;              /* Margen lateral de 20px; arriba y abajo 0 */
+  padding: 0;                  /* Sin espacio interno */
+  font-family: Montserrat;     /* Fuente personalizada */
+  font-size: 12px;             /* Tamaño base del texto */
+  background: url(../img/bg.jpg); /* Fondo con imagen */ 
+  /*background-color: #fc757f;*/
+  grid-row: 2; 
+  width: 100%;
+}
+
+
+body.bodypages{
+  background-image: none;
+  background-color: rgb(255, 251, 251);
+  position: relative;
+  z-index: 10;
+  
+}
+
+html, body {
+  height: 100% !important;
+  overflow: auto;
+  scrollbar-width: none; /* Oculta la barra de scroll en Firefox */
+}
+
+/* Oculta la barra de scroll en Chrome, Safari y Edge */
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ######### CONTENEDOR TOTAL ######### */
+/* Contenedor principal centrado y con ancho fijo */
+.contenedor {
+  /*min-height: 100vh;             Altura mínima del viewport completo */
+  width: 80%;                 /* Ancho del contenedor: 78% del ancho de la ventana */
+  padding: 0;                  /* Sin espacio interior */
+  margin: auto;                /* Centrado horizontalmente */
+  min-height: 100%;               /*Altura total de la ventana - era 100vh */
+  display: grid;
+  grid-template-rows: 110px auto 10vh;
+  background-color: white;
+}
+
+/*################################# MENU- INICIO ####################################*/
+header {
+  width: 100%;                    /* Ancho igual al contenedor */
+  height: 100%;                    /* Altura fija */
+  /*display: flex;                  /* Usa flexbox para organizar elementos */
+  /*flex-wrap: wrap;                /* Permite que los elementos salten de línea si es necesario */
+  /*justify-content: space-between; /* Espacio entre logo y menú */
+  background: white;            /* Fondo blanco */
+  grid-row: 1;
+}
+
+.header {
+  font-size: 0.75rem;          /* Tamaño de texto del encabezado */
+  background-color: white;
+}
+
+nav {
+  flex-grow: 1;                /* Ocupará todo el espacio horizontal restante */
+  background: rgb(255, 255, 255); /* Fondo blanco */
+  box-shadow: none !important;    /* Elimina cualquier sombra por defecto de Materialize */
+  height: 100%;
+}
+
+.nav-wrapper {
+  box-shadow: none !important; /* También elimina la sombra interna de .nav-wrapper */  
+}
+
+
+
+nav ul {
+  display: flex;               /* Flex para los elementos del menú */
+  flex-wrap: wrap;             /* Permitir que los ítems salten de línea si no entran */
+  justify-content: flex-end;   /* Alineación del menú hacia la derecha */
+  align-items: flex-end;       /* Alinea los ítems en la parte inferior */
+  gap: 2px;                    /* Espacio entre ítems del menú */
+  list-style: none;            /* Quita los puntos de la lista */
+}
+
+/*Nativo de materializecss, lo usamos para desplazar un poco el menú y no este muy arriba*/
+nav ul.right {
+  padding-top: 4.75%;
+}
+
+nav ul li,
+nav ul li a {
+  font-size: 0.75rem;          /* Tamaño de texto del ítem */
+  font-weight: bold;           /* Negrita */
+  text-decoration: none;       /* Sin subrayado */
+  color: black;              /* Texto negro */
+}
+
+/* Quita bordes y sombras al hacer foco o hover sobre ítems */
+.dropdown-trigger:focus,
+.dropdown-content a:focus,
+.dropdown-content a:hover {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+/* Estilo para ítems dentro del dropdown (submenús) */
+.dropdown-content li > a,
+.dropdown-content li > span {
+  font-size: 0.75rem;          /* Tamaño del texto */
+  color: steelblue;          /* Color de texto de submenú */
+  font-weight: bold;           /* Negrita */
+  display: block;              /* Que ocupen todo el ancho del contenedor */
+  white-space: nowrap;         /* No dividir texto en varias líneas */
+}
+
+/* Hover para submenús */
+.dropdown-content li > a:hover {
+  color: black;                /* Cambia el color al pasar el mouse */
+}
+
+
+/* Imagen del logo */
+img.imagenlogo { 
+  position: relative;
+  z-index: 10;
+  display: block;               /* Se comporta como un bloque */
+  height:110px;                   /* Altura fija igual al nav */
+  /*background-color: #392d46;*/
+   /*width: auto;                  Mantiene proporciones */
+  /*margin: 0 auto;*/
+}
+
+.menuCabecera{
+  position: relative;
+  z-index: 20;
+}
+
+
+/*################################# MENU - FIN ####################################*/
+
+/*################################# AUDIO - INICIO ####################################*/
+audio {
+  width: 80%;
+  max-width: 600px;
+  margin-top: 20px;
+}
+
+/*################################# AUDIO - FIN ####################################*/
+
+/*################################# MAIN - INICIO ####################################*/
+
+/* Contenido main */
+.main {  
+  padding: 0;                                     /* Espaciado superior */
+  width: 100%;  
+  min-height: 0;
+  display: flex;                                   /* Flexbox para manejar contenido interno */
+  justify-content: center;                         /* Centra el iframe horizontalmente */  
+  align-items: stretch;                            /*Estira el iframe a lo alto del main */
+  flex-grow: 1;                                    /* Ocupa todo el espacio disponible ================================REVISAR=============================*/
+  /*overflow:auto;*/
+  /*height: calc(100vh - 110px - 10vh);              Ajusta el alto del main (menos header y footer) */
+  
+}
+
+/*################################# MAIN - FIN ####################################*/
+/*################################# IFRAME - INICIO ####################################*/
+
+
+#indexIframe {  
+  width: 100%;                                     /* Ancho total del contenedor padre */
+  min-height: 50%;                               /* Altura mínima por si no se mide bien al inicio - era 571px */  
+  border: none;                                    /* Sin borde */
+  display: block;                                  /* Comportamiento en bloque */ 
+}
+
+
+
+/*################################# IFRAME - FIN ####################################*/
+/*################################# CONTENEDOR HOME - INICIO ####################################*/
+.contenedorhome {
+  width: 80%;                 /*Ancho del contenedor: era el 78vw del ancho de la ventana */  
+  padding: 0;                  /* Sin espacio interior */
+  margin: auto;                /* Centrado horizontalmente */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  overflow:hidden;             /*Oculta cualquier contenido que se desborde vertical u horizontalmente */  
+}
+
+.izquierda, .derecha {
+  width: 50%;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.izquierda p, .derecha p{
+  text-align: justify;
+}
+
+.izquierda{
+  width: 50%;
+  background: url(../img/izquierdaXW.svg) repeat top left;
+  background-repeat: repeat-y;                        /* repite solo verticalmente */  
+  background-size: auto;                              /*imagen no cambia de tamaño*/
+  padding: 3.75rem 2.8125rem 0 5.625rem;             /* hace que la imagen cubra todo el div 60px 45px 0 90px */ 
+}
+
+
+.derecha{
+  display: flex;
+  align-content: flex-start;
+  width: 50%;  
+  background: url(../img/derecha.jpg) no-repeat center 25px;  
+  background-size: auto;               /* hace que la imagen cubra todo el div */
+  padding: 3.75rem 5.625rem 0 2.8125rem;           /* 60px 90px 0 45px */
+}
+
+.quienes {
+   /*margin-top: 5px;                /* Margen superior */
+   background-color: white;
+   margin: 0;
+}
+
+/* Título dentro de #quienes */
+.quienes > h1 {
+    font-size:   1.5rem;              /* Tamaño del texto - era 24px*/
+    line-height: 1.5rem;              /* Altura de línea, imagina un cuaderno a rayas - era 24px */
+    text-align: center;             /* Alinear al centro */
+    margin-bottom: 10px;            /* Margen inferior */
+    font-weight: 400;               /* Peso normal (no bold) */
+    padding-top: 2.5rem;              /* Relleno superior 40px */
+    font-family: DauphinPlain;      /* Fuente personalizada */
+}
+
+.quienes strong {
+  font-weight: bold                 /* Texto en negrita */
+}
+
+footer{
+  grid-row: 3;
+  height: 100%;
+  width: auto;
+  background-color: black;  
+  /*flex-shrink: 0;  Evita que se encoja */
+}
+
+footer p{
+  text-align: center;
+  color: white;
+  padding: 1.25rem 0; /*20px */
+}
+
+/*################################# CONTENEDOR HOME - FIN ####################################*/
+/*################################# CONTENEDOR PAGES - INICIO   ##############################*/
+.contenedorpages {
+  width: 80%;                 /* Ancho del contenedor: 78vw del ancho de la ventana */ 
+  padding: 0;                  /* Sin espacio interior */
+  margin: auto;                /* Centrado horizontalmente */
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;        /*Oculta cualquier contenido que se desborde vertical u horizontalmente */
+}
+
+.izquierdapages, .derechapages {
+  width: 50%;  
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.izquierdapages p, .derechapages p{
+  text-align: justify;
+}
+
+/*.izquierdapages h2, .derechapages h2{
+  text-align: center;            /* Alinear al centro */
+  /*margin-bottom: .625rem;        /* Margen inferior 10px */   
+  /*padding-top: 1.25rem;          /* Relleno superior 20px*/
+  /*font-family: Montserrat;       /* Fuente personalizada */
+  /*font-size:  1.28rem	;           20.48px*/
+/*}*/
+
+h2{
+  text-align: center;            /* Alinear al centro */
+  margin-bottom: .625rem;        /* Margen inferior 10px */   
+  padding-top: 1.25rem;          /* Relleno superior 20px*/
+  font-family: Montserrat;       /* Fuente personalizada */
+  font-size:  1.28rem	;           /*20.48px*/
+}
+
+
+.izquierdapages img, .derechapages img{
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+/* Párrafos dentro de .izquierdapages .derechapages */
+.izquierdapages p>span, .derechapages p>span,
+.card-reveal p>span, .banner p>span {
+  text-align: justify;           /* Justificar texto */
+  line-height: 1.5rem;           /* Altura de línea */
+  font-size: .75rem;
+  font-weight: bold;
+  color:#333333 ;
+}
+
+.izquierdapages{
+  width: 50%;   
+  background: url(../img/izquierda.svg) top left;    
+  background-size: auto;                              /*imagen no cambia de tamaño*/
+  background-repeat: repeat-y;  
+  padding: 3.75rem 2.8125rem 0 5.625rem;                          /* hace que la imagen cubra todo el div 60px 45px 0 90px*/ 
+}
+
+
+.derechapages{
+  width: 50%;  
+  background: url(../img/derecha.svg) top right;   
+  background-size: auto;
+  background-repeat: repeat-y;  
+  padding: 3.75rem 5.625rem 0 2.8125rem;                             /* hace que la imagen cubra todo el div 60px 90px 0 45px*/   
+}
+
+.contenedorGaleria{
+  width: 80%;                 /* Ancho del contenedor: 78vw del ancho de la ventana */ 
+  padding: 0;                  /* Sin espacio interior */
+  margin: auto;                /* Centrado horizontalmente */
+  background:url(../img/fondogaleria.png) top center;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
+  overflow: hidden;        /*Oculta cualquier contenido que se desborde vertical u horizontalmente */
+  position: relative;
+  z-index: 20;
+}
+
+.banner{
+  height: 100%;
+  grid-row: 1;
+  grid-column: 1/3;
+  padding: 3.75rem 5.625rem 0 5.625rem; /* 60px 90px 0 90px */
+}
+
+.banner img{ 
+  height: 14rem;
+  position: relative;
+  z-index: 30;
+}
+
+.galeriaizquierda{
+  width: auto;   
+  background: url(../img/izquierda.svg) top left;    
+  background-size: auto;                              /*imagen no cambia de tamaño*/
+  background-repeat: repeat-y;  
+  padding: 60px 45px 0 90px;                          /* hace que la imagen cubra todo el div */ 
+  grid-row: 2;
+  grid-column: 1/2;
+  position: relative;
+  z-index: 30;
+}
+
+.galeriaderecha{
+  width:auto;  
+  background: url(../img/derecha.svg) top right;   
+  background-size: auto;
+  background-repeat: repeat-y;  
+  padding: 3.75rem 5.625rem 0 2.8125rem;                             /* hace que la imagen cubra todo el div 60px 90px 0 45px*/   
+  grid-row: 2;
+  grid-column: 2/3;
+  position: relative;
+  z-index: 30;
+}
+
+
+.artgaleria{
+   position: relative;
+   z-index: 40;
+}
+
+.texto-en-columnas {
+  width: auto;
+  background: url(../img/plantillaws.svg) top center;
+  background-size: 100% auto;
+  background-repeat: repeat-y;
+  column-count: 4;                                        /* Divide el texto en 4 columnas */
+  column-gap: 1.875rem;                                   /* Espacio entre columnas */
+  text-align: justify;                                    /* Opcional: justifica el texto */   
+  padding: 3.75rem 5.625rem 2.5rem 5.625rem;                          /* 60px 90px 40px 90px */
+}
+
+.texto-en-columnas img{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.texto-en-columnas h2{
+  text-align: center;
+}
+
+.ranking{
+  display: block;
+  margin: 0 auto;
+}
+
+/*Para no romper la imagen*/
+ /*Ocupa todo el espacio*/
+
+.ranking img{
+  display: block;                                        
+  width: 100%;
+  height: auto;
+}
+
+
+.texto-reproductor{
+  position: absolute;
+  top:  48%;  /* 91.6px*/
+  left: 9%;
+  color: white;
+}
+
+.texto-reproductor{
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1.13rem; /*18.2*/
+  justify-content: space-between;
+  
+  line-height: 1rem;
+  /*font-size: .75rem; /*13px*/
+  /*padding: .75rem 0 !important;*/
+}
+
+.texto-reproductor span.cancion{
+  font-weight: bold;
+}
+
+div.playlist{
+  /*background-color: rgb(255, 191, 0) !important; */
+  height: 1.2rem;
+}
+
+/*################################# CONTENEDOR PAGES - FIN   ##################################*/
+
+/* ######### COLLAPSIVE POPOUT ######### */
+.collapsible-body span{
+    font-weight: bold !important;
+    color: black;
+}
+
+.collapsible-body p{
+  margin: 0 !important;
+}
+
+/* ######### CARDS DE IMAGENES ######### */
+.card{
+  margin: 0;
+}
+
+.card .card-title {
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.card .card-content .card-title {
+    display: block;
+    line-height: 1rem;    /* 16px */
+    margin-top: .25rem;      /* 4px */
+    margin-bottom: .25rem;   /* 4px */
+    text-align: justify;
+}
+
+.card .card-content {
+    padding: .95rem; /*12px*/
+    border-radius: 0 0 2px 2px;
+}
+
+.card-reveal ol{
+  padding-left: 4%;
+  text-align: justify;
+}
+
+
+.bannerConcurso{
+  animation-name: misconcursos;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;  
+}
+
+@keyframes misconcursos {
+  0%{
+    transform: scale(1);  
+  }
+  30%{
+    transform: scale(1.1);
+  }
+  60%{
+    transform: scale(1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.obsequio{
+  position: relative;
+  z-index: 60; 
+}
+
+.obsequio::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 91%;
+  height: 91%;
+  animation-name: pulso;
+  animation-duration:3s;
+  animation-iteration-count:  infinite;
+  will-change: transform, opacity;
+ 
+background: radial-gradient(
+      circle at 50% 0,
+      rgba(255, 0, 0, 0.5),
+      rgba(255, 0, 0, 0), transparent 55.71%
+    ),
+    radial-gradient(
+      circle at 6.7% 75%,
+      rgba(0, 0, 255, 0.5),
+      rgba(0, 0, 255, 0), transparent 55.71%
+    ),
+    radial-gradient(
+        circle at 93.3% 75%,
+        rgba(0, 255, 0, 0.5),
+        rgba(0, 255, 0, 0), transparent 55.71%
+      )
+      rgba(232, 195, 158,1);  
+  
+  transform: translate(-50%, -50%);
+  border-radius: 50%;  
+  z-index: 50;  
+}
+
+.obsequio img{
+  position: relative;
+  z-index: 70;
+}
+
+@keyframes pulso {
+  0%, 100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.14;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.004;
+  }
+}
+
+
+
+.premio:hover{
+  transform: scale(1.2);
+}
+
+.backstage{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.collapsible-header{
+  padding-left: 3rem;
+}
+
+
+ul.vinieta>li {
+  all: revert;
+  list-style-type: disc !important;  /* muestra viñetas tipo punto */
+  list-style-position: inside;  /* el punto se alinea dentro del texto */
+  padding-left: 0.8rem; /* asegúrate de que tenga espacio para mostrarse */
+  margin-left: 0;
+}
+
+.hrSuper{
+  height: .25rem;
+  border: none;
+  background-color: #fc757f;
+  opacity: 1;
+}
+
+/*Lo use para alinear propaganda en el segmento de Jimmy da Pawer*/
+.contenidoSectionFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.antesdelfooter{  
+  margin-bottom: 2%;
+  padding-bottom: 0;  
+}
+
+.h2SinPaddingTop{
+  padding-top: 0;
+}
+
+
+.logoMovil{
+  display: none !important;
+}
+
+
+
+
+
+/*#######################################################################*/
+/*#######################################################################*/
+/*######################        NOTICIAS        #########################*/
+/*#######################################################################*/
+/*#######################################################################*/
+
+/*-----------------------------------------------------------------------*/
+/*###########    EVENTOS    ###########*/
+
+/*La clase madre para mis 3 páginas de la sección NOTICIAS*/
+.bodynoticias{
+  background-image: none;
+  background-color: rgb(255, 251, 251);
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.bodynoticias h2{
+  font-size: 30px;
+  text-align: center;
+  margin: 15px;
+}
+
+.bodynoticias h4{
+  font-size: 18px;
+  text-align: center;
+  margin: 24px;
+  font-weight: bold;
+}
+
+.bodynoticias h5{
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+  font-weight: bold;
+}
+
+.bodynoticias p{
+  text-align: justify;
+}
+
+.bodynoticias strong{
+  font-weight: bold;
+}
+
+.bodynoticias aside{
+  margin: 10px 0px 10px 0px;
+}
+
+.bodynoticias ul{
+   text-align:left; 
+   margin-left: 80px;
+}
+
+/*Contenedor de eventos*/
+
+.contenedoreventos {
+  background: url(../img/plantillaws.svg);
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  width: 100%;
+  gap: 8px;
+  margin: 0 auto;
+  padding: 3.75rem 3.75rem .9375rem 3.75rem;  /*60px 60px 15px 60px*/
+  
+}
+
+.contenedoreventos article{
+  width: 100%;
+  margin: 0 0 10px 0 ;
+}
+
+/*Columna izquierda*/
+
+.eventos_izquierda{
+  box-sizing: border-box;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto; /*centrar*/
+}
+
+.eventos_izquierda img{
+  width: 75%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin: 20px;
+}
+
+#proximamente{
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.noticia_final p{
+  text-align: center;
+}
+
+/*Columna derecha*/
+
+.eventos_derecha{
+  box-sizing: border-box;
+  text-align: center;
+  width: 90%;;
+  margin: 0 auto;
+}
+
+.eventos_derecha img{
+  width: 75%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 7px;
+  margin: 20px;
+}
+
+#felicidad{
+  width: 52px;
+  height: 52px;
+}
+
+
+/*-----------------------------------------------------------------------*/
+/*###########    MÚSICA    ###########*/
+
+/*Estilo general de mi clase madre*/
+
+.bodynoticias h3{
+  font-size: 13px;
+  text-align: center;
+}
+
+.bodynoticias a{
+  text-decoration: none;
+  color: rgb(253, 212, 212);
+}
+
+.bodynoticias a:hover{
+  color:#fc757f;
+  padding: 5px 0px 0px 10px;
+  border-radius: 5px;
+}
+
+/*Contenedor de música*/
+
+.contenedor_musica{
+  margin: 0 auto;
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 25px;
+  padding: 15px;                             /*Hace que la imagen cubra todo el div 60px 90px 0 45px*/ 
+}
+
+/*Apartado de "Música"*/
+
+.seccion_musica{
+  background-color: rgb(57, 45, 70);
+  color: rgb(253, 212, 212);
+  padding: 15px;
+}
+
+.seccion_musica p{
+  margin: 15px 0px 10px 0px;
+}
+
+/*Cada bloque de música (9 bloques)*/
+
+.artMusic{
+  width: 13.125rem;
+  height: auto;
+  margin: 15px 0px 10px 0px;
+}
+
+.artMusic img{
+  width: 100%;
+  margin: 15px 0px 10px 0px;
+}
+
+/*Apartado de "Lo último"*/
+
+.seccion_lo_ultimo img{
+  width: 380px;
+  height: 220px;
+  margin: 10px 0px 10px 0px;
+}
+
+/*Sección izquierda: ocupa las primeras 3 columnas*/
+.seccion_musica div {
+  grid-column: 1 / span 3;  /*El 1 es porque empieza en la primera columna y "span 3" es porque ocupa solo 3 columnas*/
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 15px;
+}
+
+/*Sección derecha: ocupa la última columna (columna 4)*/
+.seccion_lo_ultimo {
+  background-color: rgb(57, 45, 70);
+  color: rgb(253, 212, 212);
+  padding: 15px;
+  grid-column: 4 / span 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-self: start; /*Mi contenedor solo abarca todo mi contenido como tal*/
+}
+
+.seccion_lo_ultimo h3{
+  margin-bottom: 10px;
+}
+
+/*-----------------------------------------------------------------------*/
+/*###########    CINE Y TV    ###########*/
+
+/*Toda mi clase que contiene CINE Y TV*/
+.contenedor_cineytv{
+  background: url(../img/plantillaws.svg);
+}
+
+.cineytv_principal{
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*Título principal*/
+.cineytv_principal h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 35px;
+  color: rgb(57, 45, 70);
+  font-weight: bold;
+}
+
+/*Imagen principal*/
+.imagen_resaltante {
+  width: 100%;
+  /*max-width: 700px;*/
+  display: block;
+  opacity: 0;                                   /*Con esto la imagen es opaca o transparente al inicio*/
+  transform: translateY(20px);                  /*Nuestra imagen está abajo 20px, por eso luego sube a su posición original*/
+  animation: aparecer 1.5s ease-out forwards;   /*aparecer: así se llama nuestra palabra clave, es a elección*/
+                                                /*1.5s es cuánto dura nuestra animación*/
+                                                /*ease-oout: el tipo de velocidad, primero rapido y luego lento*/
+                                                /* forwards: cuando la animación termina se queda tal cual, no vuelve a ser transparente*/
+}
+
+@keyframes aparecer {                           /*Con @keyframes definimos la animación paso a paso*/
+  to {
+    opacity: 1;                                 /*Nuestra imagen ya no se transparente.*/        
+    transform: translateY(0);                   /*Vuelve a su posición original*/
+  }
+}
+
+/*El contenedor de nuestra imagen y su aside*/
+.cineytv_principal figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  /* cambios*/
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+
+/*Aside principal*/
+.cineytv_principal figure figcaption {
+  margin-top: 15px;
+  text-align: left; 
+  width: 100%;   
+  max-width: 700px;                             /*Así como la imagen tiene ese ancho máximo*/
+  /*Texto principal*/
+}
+
+.cineytv_principal p {
+  text-align: center;
+  color: black;
+  font-size: .9375rem; /*15px*/
+  margin: 20px 0px 20px 0px;
+}
+
+
+
+/*Enlace principal*/
+.cineytv_principal p a {
+  color: black;
+}
+
+/*El cuerpo de mi contenido*/
+.cuerpo_cineytv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;                          /*Lo alinea al centro de manera horizontal, como en el juego de la ranita*/
+  width: 75%;
+  margin: 0 auto;
+}
+
+/*Cada sección tendrá 2 columnas*/
+.columnas_cineytv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+/*Artículo con imagen a la izquierda y texto a la derecha*/
+.columnas_cineytv article {
+  display: flex;
+  flex-direction: row;                          
+  justify-content: center;                      /*Lo alinea al centro de manera vertical, como en el juego de la ranita*/
+  gap: 25px;
+  flex-wrap: wrap;                              /*Si no hay mucho espacio en la zona horizontal, entonces el contenido va a la sig. línea*/
+  width: 100%;
+}
+
+/*Es mi columna de la izquierda que contiene mi imagen y aside*/
+.columna_izquierda {
+  flex-basis: 35%;                              /*Se deja un 5% restante por márgenes (derecha: 60%), gap, etc.*/
+}
+
+.columna_izquierda img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+/*Es mi columna de la derecha que contiene mi título, texto y aside*/
+.columna_derecha {
+  flex-basis: 60%;                       
+}
+
+/*Título, párrafo y aside de mi columna derecha*/
+.columna_derecha h5,
+.columna_derecha p,
+.columna_derecha aside {
+  margin-bottom: 10px;
+}
+
+/*Enlace del título*/
+.columna_derecha h5 a {
+  color: black;
+}
+
+.cuerpo_cineytv hr {
+  border: none;
+  height: 2px;
+  background: gray;
+  width: 100%;
+  border-radius: 2px;
+}
+
+
+/*RESPONSIVE: Para pantallas de celulares*/
+@media screen and (max-width: 768px) {
+  .columnas_cineytv article {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .columna_izquierda, .columna_derecha {
+    max-width: 90%;
+    width: 100%;
+  }
+
+  .cineytv_principal figure figcaption {
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*#######################################################################*/
+/*#######################################################################*/
+/*######################      MEDIA QUERY       #########################*/
+/*#######################################################################*/
+/*#######################################################################*/
+
+/* Estilos responsive (comentados en caso desees activarlos luego) */
+@media screen and (min-width: 2560px) {
+  .contenedor, .contenedorhome, .contenedorpages {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1286px) {
+  .contenedor, .contenedorhome, .contenedorpages {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .contenedor, .contenedorhome, .contenedorpages {
+    width: 100%;
+  }
+
+  .contenedorGaleria,
+  .in-iframe .contenedorpages {
+    display: flex !important;
+    flex-direction: column !important;
+    background: none;
+  }
+
+  .izquierda,
+  .izquierdapages,
+  .derechapages,
+  .galeriaizquierda,
+  .galeriaderecha,
+  .banner {
+    width: 100%;
+    padding: 60px 90px 0 90px;
+    background: url(../img/plantillaws.svg) repeat top center;
+    background-size: auto;
+    background-repeat: repeat-y;
+    text-align: justify;
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-rows: 80px auto 10vh;
+    background-color: #fc757f;
+  }
+
+  .logoDesktop {
+    display: none !important;
+  }
+
+  .logoMovil {
+    display: block !important;
+  }
+
+  nav .brand-logo {
+    position: relative !important;
+    height: 100%;
+    width: 100%;
+    padding-left: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-start !important;
+    margin: 0 !important;
+    transform: translateX(-75%);
+  }
+
+  img.imagenlogo {
+    display: block;
+    height: auto;
+    max-height: 80px;
+    max-width: auto;
+    margin: 0 !important;
+  }
+
+  .derecha {
+    width: 0%;
+    padding: 0;
+  }
+
+  .sidenav {
+    background-color: #fc757f;
+  }
+
+  /*Inicialmente el menú grande tenía un padding para ajustar el menú cuando estaba en horizontal, ahora en vertical no lo necesitamos
+  ajustamos para que del lado lateral todo el menú se vea alineado*/
+  .sidenav li > a {
+    color: white;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 16px;
+  }
+
+  /*Va a darle color a los subitems ya que en el anterior los pusimos el texto de color blanco y en bold(negrita)*/
+  .miAcordionMenu ul li a {
+    color: rosybrown;
+  }
+
+  /* Estilos del menú hamburguesa */
+  .sidenav-trigger {
+    background-color: #fc757f; /*Fondo del contorno*/
+    padding: 40px 40px;         /* Lo agrandamos un poquito*/
+    border-radius: 4px;
+    margin: 0 !important;
+    display: flex !important;   /*Lo alineamos con el logo*/
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    right: 0;
+    top: 0px;
+  }
+
+  .nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav ul.right {
+    padding-top: 0;
+  }
+
+  .texto-en-columnas {
+    column-count: 2;
+  }
+
+  .texto-reproductor{
+    position: absolute;
+    top:  59%;  /* 91.6px*/
+    left: 16%;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .texto-reproductor{
+    display: flex !important;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 2.43rem; /*18.2*/
+    justify-content: space-between;  
+    line-height: 1.2rem;
+  }
+
+  /*####################################################################################
+  ################################### YDANIA ##########################################*/
+
+  .contenedor_musica{
+    margin: 0 auto;
+    width: 80%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto;
+    gap: 25px;
+    padding: 15px;                             /* hace que la imagen cubra todo el div 60px 90px 0 45px*/ 
+  }
+
+  .seccion_musica div{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .seccion_lo_ultimo{
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .seccion_lo_ultimo img{
+  width: 100%;
+  height: auto;
+  margin: 10px 0px 10px 0px;
+}
+
+  .artMusic {
+      width: 100%;
+      height: auto;
+      margin: 15px 0px 10px 0px;
+  }
+
+
+  .contenedoreventos {    
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+    gap: 30px;
+    padding: 3.75rem 1.875rem 0 1.875rem;  /*60px 30px 0 30px*/
+  }
+
+
+}
+
+@media screen and (max-width: 780px) {
+  nav .brand-logo {
+    transform: translateX(-70%);
+  }
+
+  /*####################################################################################
+  ################################### YDANIA ##########################################*/
+
+  .seccion_musica div {
+    grid-column: 1 / span 3;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);    
+    gap: 15px;
+}
+
+  .artMusic {
+      width: 100%;
+      height: auto;
+      margin: 15px 0px 10px 0px;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .in-iframe .contenedorpages,
+  .contenedorGaleria {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .izquierda,
+  .izquierdapages,
+  .derechapages,
+  .galeriaizquierda,
+  .galeriaderecha,
+  .banner {
+    width: 100%;
+    padding: 3.75rem 1.875rem 0 1.875rem;  /*60px 30px 0 30px*/
+    background: url(../img/plantillaws.svg) repeat top center;
+    background-size: auto;
+    background-repeat: repeat-y;
+    text-align: justify;
+  }
+
+  .texto-reproductor{
+    position: absolute;
+    top:  56%;  /* 91.6px*/
+    left: 24%;
+    color: white;
+    font-size: 1.25rem;
+  }
+
+  .texto-reproductor{
+    display: flex !important;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 2.43rem; /*18.2*/
+    justify-content: space-between;  
+    line-height: 1.2rem;
+  }
+
+.contenedorGaleria {
+    background: none;
+  }
+
+  .texto-en-columnas {
+    column-count: 1;
+  }
+  
+  .quienes > h1 {
+    padding-top: 1.25rem; /*20px*/
+  }
+
+}
