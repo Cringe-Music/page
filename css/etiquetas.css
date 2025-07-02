@@ -1251,17 +1251,17 @@ ul.vinieta>li {
 
   .texto-reproductor{
     position: absolute;
-    top:  56%;  /* 91.6px*/
+    top:  32%;  /* 91.6px*/
     left: 24%;
     color: white;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
   }
 
   .texto-reproductor{
     display: flex !important;
     flex-wrap: nowrap;
     flex-direction: column;
-    gap: 2.43rem; /*18.2*/
+    gap: 1.1rem; /*18.2*/
     justify-content: space-between;  
     line-height: 1.2rem;
   }
