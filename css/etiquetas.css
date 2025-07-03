@@ -1026,6 +1026,18 @@ ul.vinieta>li {
   .contenedor, .contenedorhome, .contenedorpages {
     width: 100%;
   }
+
+    .texto-en-columnas {
+    width: auto;
+    background: url(../img/plantillaws.svg) top center;
+    background-size: 100% auto;
+    background-repeat: repeat-y;
+    column-count: 3;                                        /* Divide el texto en 4 columnas */
+    column-gap: 1.875rem;                                   /* Espacio entre columnas */
+    text-align: justify;                                    /* Opcional: justifica el texto */   
+    padding: 3.75rem 5.625rem 2.5rem 5.625rem;                          /* 60px 90px 40px 90px */
+  }
+
 }
 
 
@@ -1043,6 +1055,7 @@ ul.vinieta>li {
 }
 
 .texto-reproductor{
+  width: 100%;
   display: flex !important;
   flex-wrap: nowrap;
   flex-direction: column;
@@ -1258,6 +1271,13 @@ ul.vinieta>li {
       margin: 15px 0px 10px 0px;
   }
 
+    .texto-reproductor{
+    position: absolute; 
+    left: 250px;
+    transform: translate(-150px, 16px);
+    color: white;
+  }
+
 
 }
 
@@ -1314,6 +1334,14 @@ ul.vinieta>li {
 }
 
 @media screen and (max-width: 360px) {
+
+.texto-reproductor{
+  position: absolute;
+  top:  240px;  /* 91.6px*/
+  left: 240px;
+  transform: translate(-135px, 0px);
+  color: white;
+}
 
   .texto-reproductor{
   display: flex !important;
