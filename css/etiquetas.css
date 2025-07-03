@@ -423,8 +423,9 @@ h2{
 
 .texto-reproductor{
   position: absolute;
-  top:  48%;  /* 91.6px*/
-  left: 9%;
+  top:  260px;  /* 91.6px*/
+  left: 240px;
+  transform: translate(-135px, 0px);
   color: white;
 }
 
@@ -432,10 +433,10 @@ h2{
   display: flex !important;
   flex-wrap: nowrap;
   flex-direction: column;
-  gap: 1.13rem; /*18.2*/
+  gap: 0.5rem; /*18.2*/
   justify-content: space-between;
   
-  line-height: 1rem;
+  line-height: 1.2rem;
   /*font-size: .75rem; /*13px*/
   /*padding: .75rem 0 !important;*/
 }
@@ -1027,6 +1028,37 @@ ul.vinieta>li {
   }
 }
 
+
+@media screen and (max-width: 1024px) {
+  .contenedor, .contenedorhome, .contenedorpages {
+    width: 100%;
+  }
+
+  .texto-reproductor{
+  position: absolute;
+  top:  248px;  /* 91.6px*/
+  left: 240px;
+  transform: translate(-135px, 0px);
+  color: white;
+}
+
+.texto-reproductor{
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.5rem; /*18.2*/
+  justify-content: space-between;
+  
+  line-height: 1.2rem;
+  /*font-size: .75rem; /*13px*/
+  /*padding: .75rem 0 !important;*/
+}
+
+}
+
+
+
+
 @media screen and (max-width: 990px) {
   .contenedor, .contenedorhome, .contenedorpages {
     width: 100%;
@@ -1141,22 +1173,22 @@ ul.vinieta>li {
     column-count: 2;
   }
 
-  .texto-reproductor{
-    position: absolute;
-    top:  59%;  /* 91.6px*/
-    left: 16%;
-    color: white;
-    font-size: 1.25rem;
-  }
+.texto-reproductor{
+  position: absolute;
+  top:  250px;  /* 91.6px*/
+  left: 270px;
+  transform: translate(-135px, 0px);
+  color: white;
+}
 
-  .texto-reproductor{
-    display: flex !important;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: 2.43rem; /*18.2*/
-    justify-content: space-between;  
-    line-height: 1.2rem;
-  }
+.texto-reproductor{
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.5rem; /*18.2*/
+  justify-content: space-between;  
+  line-height: 1.2rem; 
+}
 
   /*####################################################################################
   ################################### YDANIA ##########################################*/
@@ -1226,6 +1258,7 @@ ul.vinieta>li {
       margin: 15px 0px 10px 0px;
   }
 
+
 }
 
 @media screen and (max-width: 500px) {
@@ -1249,22 +1282,22 @@ ul.vinieta>li {
     text-align: justify;
   }
 
-  .texto-reproductor{
-    position: absolute;
-    top:  32%;  /* 91.6px*/
-    left: 24%;
-    color: white;
-    font-size: 1.1rem;
-  }
+.texto-reproductor{
+  position: absolute; 
+  left: 270px;
+  transform: translate(-170px, 16px);
+  color: white;
+}
 
-  .texto-reproductor{
-    display: flex !important;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    gap: 1.1rem; /*18.2*/
-    justify-content: space-between;  
-    line-height: 1.2rem;
-  }
+.texto-reproductor{
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 1rem; /*18.2*/
+  justify-content: space-between;  
+  line-height: 1.2rem; 
+  text-align: left;
+}
 
 .contenedorGaleria {
     background: none;
