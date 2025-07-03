@@ -1048,7 +1048,7 @@ ul.vinieta>li {
 
   .texto-reproductor{
   position: absolute;
-  top:  255px;  /* 91.6px*/
+  top:  260px;  /* 91.6px*/
   left: 240px;
   transform: translate(-135px, 0px);
   color: white;
