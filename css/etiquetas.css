@@ -1032,7 +1032,7 @@ ul.vinieta>li {
     background: url(../img/plantillaws.svg) top center;
     background-size: 100% auto;
     background-repeat: repeat-y;
-    column-count: 3;                                        /* Divide el texto en 4 columnas */
+    column-count: 4;                                        /* Divide el texto en 4 columnas */
     column-gap: 1.875rem;                                   /* Espacio entre columnas */
     text-align: justify;                                    /* Opcional: justifica el texto */   
     padding: 3.75rem 5.625rem 2.5rem 5.625rem;                          /* 60px 90px 40px 90px */
@@ -1266,17 +1266,25 @@ ul.vinieta>li {
 }
 
   .artMusic {
-      width: 100%;
-      height: auto;
-      margin: 15px 0px 10px 0px;
+    width: 100%;
+    height: auto;
+    margin: 15px 0px 10px 0px;
   }
 
-    .texto-reproductor{
-    position: absolute; 
+  .texto-reproductor{
+    position: absolute;
+    top: 230px;
     left: 250px;
     transform: translate(-150px, 16px);
     color: white;
   }
+
+  .texto-reproductor{
+  
+  gap: 0.5rem; 
+  line-height: 0.9rem; 
+  
+}
 
 
 }
@@ -1303,7 +1311,7 @@ ul.vinieta>li {
   }
 
 .texto-reproductor{
-  position: absolute; 
+  position: absolute;  
   left: 270px;
   transform: translate(-170px, 16px);
   color: white;
@@ -1333,7 +1341,7 @@ ul.vinieta>li {
 
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 414px) {
 
 .texto-reproductor{
   position: absolute;
