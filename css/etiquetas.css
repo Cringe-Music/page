@@ -1312,3 +1312,17 @@ ul.vinieta>li {
   }
 
 }
+
+@media screen and (max-width: 360px) {
+
+  .texto-reproductor{
+  display: flex !important;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  gap: 0.1rem; /*18.2*/
+  justify-content: space-between;  
+  line-height: 1.2rem; 
+  text-align: left;
+}
+
+}
